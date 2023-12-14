@@ -13,18 +13,18 @@ datasource db {
 
 // User model representing the application's users
 model User {
-  id       String    @default(cuid()) @id
+  id       String    @default(uuid()) @id
   email    String   @unique
   username String   @unique 
   password String
-  recipes  Recipe[]
-  ratings  Rating[]
-  @@map("users")
+  recipes  Recipe[] // One-to-many relationship with Recipe model
+  ratings  Rating[] // One-to-many relationship with Rating model
+  @@map("users") 
 }
 
 // Recipe model representing the recipes created by users
 model Recipe {
-  id            String     @default(cuid()) @id
+  id            String     @default(uuid()) @id
   title         String
   ingredients   String[]   
   steps         String[]   
@@ -42,7 +42,7 @@ model Recipe {
 
 // Category model representing the categories to which recipes belong
 model Category {
-  id          String     @default(cuid()) @id
+  id          String     @default(uuid()) @id
   name        String
   description String
   recipes     Recipe[]
@@ -51,7 +51,7 @@ model Category {
 
 // Rating model representing the ratings provided by users for recipes
 model Rating {
-  id        String     @default(cuid()) @id
+  id        String     @default(uuid()) @id
   value     Int
   userId    String    // Foreign key referencing User model
   user      User      @relation(fields: [userId], references: [id])

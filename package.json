@@ -17,7 +17,11 @@
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "test": "npm run prettier:check && npm run lint && npm run typecheck && npm run jest",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "seed": "npx prisma db seed"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"}  prisma/seeds/seed.ts"
   },
   "dependencies": {
     "@mantine/carousel": "^7.3.1",
@@ -51,7 +55,7 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.7",
-    "@types/node": "^20.8.10",
+    "@types/node": "^20.10.4",
     "@types/react": "18.2.34",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
@@ -79,7 +83,8 @@
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "ts-jest": "^29.1.1",
-    "typescript": "5.2.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
   },
   "packageManager": "yarn@4.0.1"
 }

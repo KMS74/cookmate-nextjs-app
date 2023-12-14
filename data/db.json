@@ -2,13 +2,15 @@
   "users": [
     {
       "id": "user1",
-      "email": "user1@example.com",
-      "name": "John Doe"
+      "email": "john@example.com",
+      "username": "John Doe",
+      "password": "5f4dcc3b5aa765d61d8327deb882cf99"
     },
     {
       "id": "user2",
-      "email": "user2@example.com",
-      "name": "Jane Smith"
+      "email": "jane@example.com",
+      "username": "Jane Smith",
+      "password": "5f4dcc3b5aa765d61d8327deb882cf100"
     }
   ],
   "categories": [
@@ -30,7 +32,6 @@
       "ingredients": ["flour", "sugar", "cocoa", "butter", "eggs"],
       "steps": ["Preheat oven", "Mix ingredients", "Bake for 30 minutes"],
       "cookingTime": 30,
-      "difficultyLevel": "Intermediate",
       "imageUrls": [
         "https://example.com/chocolate-cake-1.jpg",
         "https://example.com/chocolate-cake-2.jpg",
