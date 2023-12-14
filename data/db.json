@@ -20,7 +20,7 @@
     {
       "id": "category2",
       "name": "Healthy",
-      "description": "Hearty and satisfying meals"
+      "description": "Healthy recipes for a balanced diet"
     }
   ],
   "recipes": [
@@ -32,58 +32,54 @@
       "cookingTime": 30,
       "difficultyLevel": "Intermediate",
       "imageUrls": [
-        "https://via.placeholder.com/800x600.png?text=Chocolate+Cake+1",
-        "https://via.placeholder.com/800x600.png?text=Chocolate+Cake+2",
-        "https://via.placeholder.com/800x600.png?text=Chocolate+Cake+3"
+        "https://example.com/chocolate-cake-1.jpg",
+        "https://example.com/chocolate-cake-2.jpg",
+        "https://example.com/chocolate-cake-3.jpg"
       ],
       "authorId": "user1",
       "categoryId": "category1",
-      "ratings": [
-        {
-          "id": "rating1",
-          "value": 4,
-          "userId": "user2"
-        },
-        {
-          "id": "rating2",
-          "value": 5,
-          "userId": "user1"
-        }
-      ],
       "createdAt": 1640995200
     },
     {
       "id": "recipe2",
       "title": "Spaghetti Bolognese",
-      "ingredients": [
-        "spaghetti",
-        "ground beef",
-        "tomato sauce",
-        "onion",
-        "garlic"
-      ],
+      "ingredients": ["spaghetti", "ground beef", "tomato sauce", "onion", "garlic"],
       "steps": ["Boil spaghetti", "Cook beef and sauce", "Combine"],
       "cookingTime": 45,
       "difficultyLevel": "Easy",
       "imageUrls": [
-        "https://via.placeholder.com/800x600.png?text=Spaghetti+Bolognese+1",
-        "https://via.placeholder.com/800x600.png?text=Spaghetti+Bolognese+2"
+        "https://example.com/spaghetti-bolognese-1.jpg",
+        "https://example.com/spaghetti-bolognese-2.jpg"
       ],
       "authorId": "user2",
       "categoryId": "category2",
-      "ratings": [
-        {
-          "id": "rating3",
-          "value": 5,
-          "userId": "user1"
-        },
-        {
-          "id": "rating4",
-          "value": 4,
-          "userId": "user2"
-        }
-      ],
       "createdAt": 1641081000
+    }
+  ],
+  "ratings": [
+    {
+      "id": "rating1",
+      "value": 4,
+      "userId": "user2",
+      "recipeId": "recipe1"
+    },
+    {
+      "id": "rating2",
+      "value": 5,
+      "userId": "user1",
+      "recipeId": "recipe1"
+    },
+    {
+      "id": "rating3",
+      "value": 5,
+      "userId": "user1",
+      "recipeId": "recipe2"
+    },
+    {
+      "id": "rating4",
+      "value": 4,
+      "userId": "user2",
+      "recipeId": "recipe2"
     }
   ]
 }
