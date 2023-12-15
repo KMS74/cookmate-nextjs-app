@@ -1,8 +1,9 @@
 import '@mantine/core/styles.css';
 import React from 'react';
 import { Montserrat } from 'next/font/google';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { MantineProvider, ColorSchemeScript, Container } from '@mantine/core';
 import { theme } from '../theme';
+import Navbar from '@/components/Navbar/Navbar';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -26,7 +27,12 @@ export default function RootLayout({ children }: { children: any }) {
         />
       </head>
       <body className={montserrat.className}>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <Container size="lg">
+            <Navbar />
+            {children}
+          </Container>
+        </MantineProvider>
       </body>
     </html>
   );

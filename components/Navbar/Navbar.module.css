@@ -1,0 +1,8 @@
+.header {
+  padding: rem(24px);
+}
+
+.nav a {
+  text-decoration: none;
+  color: light-dark(var(--mantine-dark-filled), var(--mantine-color-white));
+}
